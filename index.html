@@ -26,14 +26,9 @@
 
                         <div class="info">
 
-                            <span class="date"><span class="month">Jul<span>y</span></span> <span class="day">14</span><span class="year">, 2014</span></span>
+                            <span class="date"><span class="month">Jul<span>y</span></span> <span class="day">1</span><span class="year">, 2014</span></span>
 
-                            <ul class="stats">
-                                <li><a href="#" class="icon fa-comment">16</a></li>
-                                <li><a href="#" class="icon fa-heart">32</a></li>
-                                <li><a href="#" class="icon fa-twitter">64</a></li>
-                                <li><a href="#" class="icon fa-facebook">128</a></li>
-                            </ul>
+
                         </div>
 
                         <p>
@@ -71,6 +66,37 @@
                     </article>
 
 
+                    <!-- Post -->
+                    <article class="box post post-excerpt">
+                        <header>
+                            <h2><a href="#">Game Mechanics Related Discussion</a></h2>
+
+                        </header>
+
+                        <div class="info">
+
+                            <span class="date"><span class="month">Jul<span>y</span></span> <span class="day">1</span><span class="year">, 2014</span></span>
+
+
+                        </div>
+
+                        <p>
+                            The player uses 2 fingers to press the termina so that it can generate an electric arc.
+                            In order to make the game more interesting and keep player moving or using finger, I came up with the fellowing function:
+                        </p>
+
+                        <p>
+                            When players double-click on two terminals, it will generate a line to bounce off the enemy. If the bounce-off enemy collide with the falling enemy, both of them will explode.
+
+                        </p>
+                        <a href="#" class="image featured"><img src="images/TwoMethod.jpg" alt="" /></a>
+                        <p>
+                            After a group discussion, we thought that this function will make the game too difficult to play, so we may not implement it.
+                        </p>
+
+                    </article>
+
+
 
 
                     <!-- Post -->
@@ -80,13 +106,8 @@
 
                         </header>
                         <div class="info">
-                            <span class="date"><span class="month">Jul<span>y</span></span> <span class="day">8</span><span class="year">, 2014</span></span>
-                            <ul class="stats">
-                                <li><a href="#" class="icon fa-comment">16</a></li>
-                                <li><a href="#" class="icon fa-heart">32</a></li>
-                                <li><a href="#" class="icon fa-twitter">64</a></li>
-                                <li><a href="#" class="icon fa-facebook">128</a></li>
-                            </ul>
+                            <span class="date"><span class="month">Jul<span>y</span></span> <span class="day">2</span></span>
+
                         </div>
 
                         <p>
@@ -114,13 +135,8 @@
 
                         </header>
                         <div class="info">
-                            <span class="date"><span class="month">Jul<span>y</span></span> <span class="day">8</span><span class="year">, 2014</span></span>
-                            <ul class="stats">
-                                <li><a href="#" class="icon fa-comment">16</a></li>
-                                <li><a href="#" class="icon fa-heart">32</a></li>
-                                <li><a href="#" class="icon fa-twitter">64</a></li>
-                                <li><a href="#" class="icon fa-facebook">128</a></li>
-                            </ul>
+                            <span class="date"><span class="month">Jul<span>y</span></span> <span class="day">3</span><span class="year">, 2014</span></span>
+
                         </div>
 
                         <p>
@@ -153,13 +169,8 @@
 
                         </header>
                         <div class="info">
-                            <span class="date"><span class="month">Jul<span>y</span></span> <span class="day">8</span><span class="year">, 2014</span></span>
-                            <ul class="stats">
-                                <li><a href="#" class="icon fa-comment">16</a></li>
-                                <li><a href="#" class="icon fa-heart">32</a></li>
-                                <li><a href="#" class="icon fa-twitter">64</a></li>
-                                <li><a href="#" class="icon fa-facebook">128</a></li>
-                            </ul>
+                            <span class="date"><span class="month">Jul<span>y</span></span> <span class="day">4</span><span class="year">, 2014</span></span>
+
                         </div>
 
                         <p>
@@ -193,16 +204,114 @@
                         </p>
                         <p>
                             <strong>· </strong> Enemy movement to be changed, like zig zag or diagonal, etc.
-                        </p> 
+                        </p>
 
                         <p>
-                            <strong>After discussion</strong>
+                            <strong>Summary</strong>
                         </p>
                         <p>
-
+                            After discussion, we are not going to change our “two finger terminal” since it is the point of our game mechanic. But we will improve the fellowing points mentioned in feedback：
+                        </p>
+                        <p>
+                            <strong>· </strong> Add positive feedback.
+                        </p>
+                        <p>
+                            <strong>· </strong> Make terminals more visible.
+                        </p>
+                        <p>
+                            <strong>· </strong> Improve the game over scene.
+                        </p>
+                        <p>
+                            <strong>· </strong> Add "+1 life" function to decress the difficluty of the game.
+                        </p>
+                        <p>
+                            <strong>· </strong> Make the energy bar more intuitive, so that player can understand the connection between energy bar and their remaining energy.
                         </p>
                     </article>
 
+
+                    <article class="box post post-excerpt">
+                        <header>
+                            <h2><a href="#">Positive Feedback in Game</a></h2>
+
+                        </header>
+                        <div class="info">
+                            <span class="date"><span class="month">Jul<span>y</span></span> <span class="day">5</span><span class="year">, 2014</span></span>
+
+                        </div>
+
+                        <p>
+
+                        </p>
+
+                        <p>
+                            We decide to add positive feedback in game, so I made the word feedback prefab, which can be instantiated when the user gained lives or kill the enemies.
+                            It should be presented at a fixed angle in a fixed position.
+                        </p>
+                        <p>
+                            <strong>· </strong> To instantiate prefab:
+                        </p>
+                        <a href="#" class="image featured"><img src="images/Code1.png" alt="" /></a>
+                        <p>
+                            But the floatingtext is not presented when running the game, because the rotation is not correct, it covered by background.
+                        </p>
+                        <p>
+                            Quaternions are generally represented in the form: A +bi +cj +dk
+                        </p>
+                        <p>
+                            Therefore, it is difficult to set desired rotation with Quaternion.Using quaternion to put an gameobject to a specific rotation requires a certain operation. Therefore, assigning quaternion directly is not a good choice.
+
+                        </p>
+                        <p>
+                            Using quaternion.euler can transform the quaternions into Euler expressions. Then, assign (x, y, z) values to change the rotation of gameobject.
+                        </p>
+                        <a href="#" class="image featured"><img src="images/Code2.png" alt="" /></a>
+                    </article>
+
+
+
+
+                    <article class="box post post-excerpt">
+                        <header>
+                            <h2><a href="#">Animation Trigger</a></h2>
+
+                        </header>
+                        <div class="info">
+                            <span class="date"><span class="month">Jul<span>y</span></span> <span class="day">6</span><span class="year">, 2014</span></span>
+
+                        </div>
+
+                        <p>
+
+                        </p>
+
+                        <p>
+                            I made a “Game Over” animation in the unity, it will play straight away when you click the play button. But I want it play after player lose their life, so it is better to add a trigger in animation.
+
+                        </p>
+
+
+                        <p>
+                            <strong>· </strong>Create a new empty state in Animator.
+                        </p>
+                        <p>
+                            <strong>· </strong>Set it as default.
+                        </p>
+                        <p>
+                            <strong>· </strong>Make transition to game over clip.
+                        </p>
+                        <p>
+                            <strong>· </strong>Create a new trigger named GameOver in Parameters.
+                        </p>
+                        <p>
+                            <strong>· </strong>Select the transition, and there is a conditions section appeared in Inspector, then select “GameOver” in conditions.
+                        </p>
+                        <p>
+                            <strong>· </strong> Add some code.
+                        </p>
+
+                        <a href="#" class="image featured"><img src="images/Code3.png" alt="" /></a>
+                    </article>
 
 
 
@@ -241,83 +350,10 @@
 
                 
 
-                <!-- Recent Posts -->
-                <section class="box recent-posts">
-                    <header>
-                        <h2>Recent Posts</h2>
-                    </header>
-                    <ul>
-                        <li><a href="#">Lorem ipsum dolor</a></li>
-                        <li><a href="#">Feugiat nisl aliquam</a></li>
-                        <li><a href="#">Sed dolore magna</a></li>
-                        <li><a href="#">Malesuada commodo</a></li>
-                        <li><a href="#">Ipsum metus nullam</a></li>
-                    </ul>
-                </section>
 
 
 
-                <!-- Calendar -->
-                <section class="box calendar">
-                    <div class="inner">
-                        <table>
-                            <caption>July 2014</caption>
-                            <thead>
-                                <tr>
-                                    <th scope="col" title="Monday">M</th>
-                                    <th scope="col" title="Tuesday">T</th>
-                                    <th scope="col" title="Wednesday">W</th>
-                                    <th scope="col" title="Thursday">T</th>
-                                    <th scope="col" title="Friday">F</th>
-                                    <th scope="col" title="Saturday">S</th>
-                                    <th scope="col" title="Sunday">S</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td colspan="4" class="pad"><span>&nbsp;</span></td>
-                                    <td><span>1</span></td>
-                                    <td><span>2</span></td>
-                                    <td><span>3</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>4</span></td>
-                                    <td><span>5</span></td>
-                                    <td><a href="#">6</a></td>
-                                    <td><span>7</span></td>
-                                    <td><span>8</span></td>
-                                    <td><span>9</span></td>
-                                    <td><a href="#">10</a></td>
-                                </tr>
-                                <tr>
-                                    <td><span>11</span></td>
-                                    <td><span>12</span></td>
-                                    <td><span>13</span></td>
-                                    <td class="today"><a href="#">14</a></td>
-                                    <td><span>15</span></td>
-                                    <td><span>16</span></td>
-                                    <td><span>17</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span>18</span></td>
-                                    <td><span>19</span></td>
-                                    <td><span>20</span></td>
-                                    <td><span>21</span></td>
-                                    <td><span>22</span></td>
-                                    <td><a href="#">23</a></td>
-                                    <td><span>24</span></td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#">25</a></td>
-                                    <td><span>26</span></td>
-                                    <td><span>27</span></td>
-                                    <td><span>28</span></td>
-                                    <td class="pad" colspan="3"><span>&nbsp;</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
+
 
 
 
